@@ -16,7 +16,9 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/ml-explore/mlx-swift", exact: "0.30.2"),
+    // Bumped from exact 0.30.2 — see KokoroSwift fork's Package.swift
+    // for the full mlx#3083 / mlx#3092 root-cause notes.
+    .package(url: "https://github.com/ml-explore/mlx-swift", from: "0.31.0"),
     .package(url: "https://github.com/mlalma/MLXUtilsLibrary.git", exact: "0.0.6")
   ],
   targets: [
